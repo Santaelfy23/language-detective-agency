@@ -373,6 +373,10 @@
         <div class="label">CASES CLOSED</div>
         <div class="value" id="overallCases">0 / 0</div>
       </div>
+      <div>
+        <div class="label">FIELD RANK</div>
+        <div class="value" id="overallRank">🔍 Rookie Recruit</div>
+      </div>
       <div id="methodStatBlock" style="display:none;">
         <div class="label">🎭 METHOD DETECTIVE</div>
         <div class="value" id="overallMethod">0</div>
@@ -437,6 +441,17 @@
       <p style="font-style:italic; color:#5c5138; margin-top:10px;">Nothing filed yet. Close your first case and it'll land here.</p>
     </div>
     <div id="collectionCards" style="margin-top:22px;"></div>
+  </div>
+
+  <!-- ===== PROMOTION CELEBRATION MODAL ===== -->
+  <div id="promotionOverlay" style="display:none; position:fixed; inset:0; background:rgba(27,42,74,0.6); z-index:60; align-items:center; justify-content:center; padding:20px;">
+    <div style="background:#fffaf0; border:3px solid var(--brass-light); border-radius:8px; max-width:400px; width:100%; padding:32px 26px; text-align:center; box-shadow:0 20px 50px var(--shadow);">
+      <div style="font-size:44px;" id="promotionIcon">🎖️</div>
+      <div class="case-label" style="justify-content:center; display:flex; margin-top:10px;">PROMOTED</div>
+      <h3 style="font-family:'Playfair Display',serif; font-weight:900; margin:8px 0 6px; font-size:24px; color:var(--ink);" id="promotionTitle"></h3>
+      <p style="font-size:14px; color:#5c5138; line-height:1.55; margin:0 0 22px;" id="promotionBody"></p>
+      <button class="btn gold" style="margin-top:0;" onclick="closePromotionModal()">Onward →</button>
+    </div>
   </div>
 
   <!-- ===== CUSTOM CONFIRM MODAL (replaces native confirm(), which sandboxed iframes block) ===== -->
@@ -1128,6 +1143,99 @@ ALGERNON. Yes; and that the happy English home has proved in half the time.</div
       "Absurd Logic Presented as Fact",
       "Circular Reasoning as Comedy"
     ]
+  },
+
+  holmes: {
+    meta: {
+      num: "CASE FILE NO. 6", title: "The Woman",
+      author: "Sir Arthur Conan Doyle, A Scandal in Bohemia",
+      desc: "The witness insists he never felt a thing. Find six hidden clues in the opening.",
+      totalClues: 6
+    },
+    readAloudEnabled: true,
+    stage1: {
+      label: "CASE FILE NO. 6 &middot; A SCANDAL IN BOHEMIA, ARTHUR CONAN DOYLE",
+      title: "Just read it. Notice how a character gets introduced.",
+      brief: `This is the opening paragraph of "A Scandal in Bohemia," published in 1891 — the very first Sherlock Holmes short story. Dr. Watson, Holmes's friend and narrator, is telling us about a woman named Irene Adler before the mystery has even started. Don't hunt for tricks yet — just read it, and notice what kind of man this makes Holmes sound like.`,
+      passage: "To Sherlock Holmes she is always THE woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. He never spoke of the softer passions, save with a gibe and a sneer. They were admirable things for the observer—excellent for drawing the veil from men's motives and actions. But for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. Grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. And yet there was but one woman to him, and that woman was the late Irene Adler, of dubious and questionable memory.",
+      prompt: "Before you move on — what kind of person does this description make Holmes sound like to you?"
+    },
+    stage2: {
+      label: "CASE FILE NO. 6 &middot; INVESTIGATE",
+      title: "Six clues are hiding in this introduction.",
+      brief: `Same text — but now click on any phrase that looks suspicious, like Doyle might be pulling a trick. Each one reveals what's really going on.`,
+      segments: [
+        "To Sherlock Holmes ",
+        {id:1, text:"she is always THE woman"},
+        ". I have seldom heard him mention her under any other name. In his eyes ",
+        {id:2, text:"she eclipses and predominates the whole of her sex"},
+        ". It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, ",
+        {id:3, text:"the most perfect reasoning and observing machine that the world has seen"},
+        ", but as a lover ",
+        {id:4, text:"he would have placed himself in a false position"},
+        ". He never spoke of the softer passions, save with a gibe and a sneer. They were admirable things for the observer—excellent for drawing the veil from men's motives and actions. But for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. ",
+        {id:5, text:"Grit in a sensitive instrument, or a crack in one of his own high-power lenses"},
+        ", would not be more disturbing than a strong emotion in a nature such as his. And yet there was but one woman to him, and that woman was the late Irene Adler, ",
+        {id:6, text:"of dubious and questionable memory"},
+        "."
+      ],
+      clueData: {
+        1: {title:"The Defining Article", text:"Doyle capitalises THE in the original text: not 'a woman,' but 'THE woman.' A tiny word choice turns Irene Adler from one person Holmes happened to notice into an entire category with exactly one member. It's a title, almost like a rank — and it tells us instantly that whatever happened between them mattered enormously, before we know a single fact about her."},
+        2: {title:"Hyperbole", text:"Saying she 'eclipses and predominates the whole of her sex' is a huge exaggeration — she doesn't just impress Holmes, she outshines every woman who has ever lived, in his eyes. Watson piles on the extreme language deliberately, because Holmes is famous for never being impressed by anyone. The bigger the claim, the more remarkable we understand her to be."},
+        3: {title:"The Mechanical Metaphor", text:"Calling Holmes 'the most perfect reasoning and observing machine' isn't a compliment about efficiency — it strips him of humanity. Machines don't feel, doubt, or love. By describing his own friend this way, Watson is warning us exactly what kind of story this is going to be: one where feeling anything at all counts as a malfunction."},
+        4: {title:"Foreshadowing Through Understatement", text:"'He would have placed himself in a false position' sounds calm and formal, almost like a line from a legal document — but it's actually Watson warning us, right at the very start, that love would be dangerous and destabilising for a man like Holmes. Notice the story hasn't even begun yet, and Doyle has already told us the stakes."},
+        5: {title:"The Extended Metaphor", text:"Doyle doesn't drop the machine idea after one line — he keeps building on it. 'Grit in a sensitive instrument' and 'a crack in one of his own high-power lenses' both continue the mechanical image, turning emotion itself into something that could physically damage Holmes's equipment. An extended metaphor like this makes an idea feel woven through a whole passage rather than mentioned once and forgotten."},
+        6: {title:"The Ironic Undercutting", text:"After a whole paragraph building Irene Adler up as 'the woman' who eclipses her entire sex, Watson ends not with romance but with 'dubious and questionable memory' — a phrase that sounds almost disapproving. It's a classic technique: build up expectation, then deflate it at the very last moment, so the reader isn't quite sure whether to feel moved or amused."}
+      }
+    },
+    quiz: [
+      {q:"Why does capitalising 'THE woman' matter?", opts:["It's just how old books were printed","It turns Irene Adler into a category of one, rather than just a woman Holmes noticed","It shows Watson didn't know her name","It has no real effect"], correct:1},
+      {q:"'She eclipses and predominates the whole of her sex' is an example of:", opts:["Understatement","Hyperbole (extreme exaggeration)","Onomatopoeia","A simile"], correct:1},
+      {q:"Calling Holmes 'the most perfect reasoning and observing machine' works by:", opts:["Praising his kindness","Stripping away his humanity to emphasise pure, cold logic","Comparing him to a computer literally","Describing his physical appearance"], correct:1},
+      {q:"What's the effect of ending the paragraph with 'of dubious and questionable memory' after all the buildup?", opts:["It confirms Holmes loved her deeply","It undercuts the romantic buildup with sudden, ironic deflation","It's a printing error","It proves Watson disliked Holmes"], correct:1}
+    ],
+    stage3: {
+      lockText: "Finish Stage Two — find all 6 clues and complete the quiz — to unlock the full essay.",
+      headerHTML: `
+        <div class="title-block">
+          <div class="stamp">★ CASE FILE UNLOCKED ★</div>
+          <h1>The Woman</h1>
+          <div class="subt">How Conan Doyle Introduces His Greatest Character</div>
+        </div>
+        <p style="text-align:center; font-family:'Special Elite',monospace; font-size:12.5px; color:var(--brass); letter-spacing:1px;">You cracked the case on the opening paragraph. Here's what comes right after it — read now with fresh eyes.</p>
+        <div class="passage" style="margin-top:14px; padding-top:14px; border-top:2px dashed var(--paper-line);">I had seen little of Holmes lately. My marriage had drifted us away from each other. My own complete happiness, and the home-centred interests which rise up around the man who first finds himself master of his own establishment, were sufficient to absorb all my attention, while Holmes, who loathed every form of society with his whole Bohemian soul, remained in our lodgings in Baker Street, buried among his old books, and alternating from week to week between cocaine and ambition, the drowsiness of the drug, and the fierce energy of his own keen nature.</div>
+        <p style="margin:10px 0 0; font-size:12.5px; font-style:italic; color:#7a6f52; border-left:3px solid var(--brass); padding-left:10px;">A quick note: cocaine was a legal medicine in Victorian England, and Conan Doyle uses it here as a period detail — a sign that Holmes gets restless and low without a case, not something to try. Watson himself disapproves of it and gets Holmes to (mostly) give it up in later stories.</p>
+        <div class="passage" style="margin-top:14px;">He was still, as ever, deeply attracted by the study of crime, and occupied his immense faculties and extraordinary powers of observation in following out those clues, and clearing up those mysteries which had been abandoned as hopeless by the official police. From time to time I heard some vague account of his doings: of his summons to Odessa in the case of the Trepoff murder, of his clearing up of the singular tragedy of the Atkinson brothers at Trincomalee, and finally of the mission which he had accomplished so delicately and successfully for the reigning family of Holland. Beyond these signs of his activity, however, which I merely shared with all the readers of the daily press, I knew little of my former friend and companion.</div>
+        <p style="margin-top:30px; text-align:center; font-family:'Special Elite',monospace; font-size:12.5px; color:var(--brass); letter-spacing:1px;">Now, the deep analysis — how it all fits together.</p>
+        <p>Before Sherlock Holmes ever picks up a magnifying glass or utters a single deduction, Conan Doyle has already told us exactly who he is — not through a list of facts, but through the careful, deliberate way Watson describes him. This is characterisation working entirely through language: word choice, exaggeration, and metaphor, all building one single impression before the plot has even started.</p>
+      `,
+      chapters: [
+        {heading:"A Title, Not a Name", body:`Watson could have simply written "he never forgot Irene Adler." Instead, he gives her a title: THE woman. Capitalised in Doyle's original printing, it functions almost like a rank or a role, the way we might say "the Queen" rather than "a queen." Before we know anything else about her, we know she occupies a category all her own in Holmes's mind — and that alone makes us want to know why.`},
+        {heading:"Exaggeration as Evidence", body:`"She eclipses and predominates the whole of her sex" is a wildly overstated claim — no single person could really outshine every woman who ever lived. But that's exactly the point of hyperbole: because we know Holmes is famous for being unimpressed by almost everyone, the sheer size of the exaggeration becomes evidence of just how unusual this case — and this woman — must have been.`},
+        {heading:"Building a Man Out of Machinery", body:`Twice in one paragraph, Doyle reaches for mechanical language: Holmes is "the most perfect reasoning and observing machine," and emotion is compared to "grit in a sensitive instrument" or "a crack in one of his own high-power lenses." This is an extended metaphor — one image, developed across several sentences rather than used once and dropped. It does something clever: it makes Holmes's coldness sound less like a personality trait and more like a design feature, a machine built specifically not to feel.`},
+        {heading:"A Warning Before the Story Begins", body:`"As a lover he would have placed himself in a false position" sounds formal and almost legal — but underneath the polite phrasing, Watson is quietly warning us: if Holmes ever did feel something, it would put him at a disadvantage. This is foreshadowing dressed up as understatement. The story hasn't even started, and Doyle has already told us what's at stake for his hero.`},
+        {heading:"The Anticlimax", body:`After an entire paragraph spent building Irene Adler up — eclipsing her whole sex, being the one exception to Holmes's iron control — Watson doesn't land on romance. He lands on "of dubious and questionable memory," a strange, faintly disapproving phrase to end on. This sudden deflation after so much buildup is a technique worth naming: it keeps us slightly off-balance, unsure whether we're meant to feel moved, amused, or both.`},
+        {heading:"Why Doyle Front-Loads the Character", body:`Notice that all of this happens before a single scene of dialogue or action. Doyle is doing something many writers do with their most important characters: telling us how to feel about someone before we ever watch them act. By the time Holmes actually appears in the story, pacing his rooms in Baker Street, we already know the one thing that makes him vulnerable — which means every choice he makes afterward, we're quietly watching for cracks in that machine.`}
+      ],
+      closingHTML: `That's the trick at the heart of this opening: Conan Doyle never simply tells us Holmes is brilliant and unfeeling — he builds an entire paragraph of exaggeration, mechanical metaphor, and ironic deflation to make us feel it. By the time the actual mystery begins, we already know exactly what would break this "perfect reasoning machine" — which is precisely why we keep reading to see if it happens.`,
+      takeaway: `You can introduce any character this same way — before they ever do anything, tell us what they refuse to feel, and readers will spend the whole story watching for the crack. Try describing someone you know (or a character you're inventing) not through what they look like, but through the one thing they claim never affects them. That single detail can carry an entire introduction.`,
+      aboutBook: {
+        overview: `"A Scandal in Bohemia" is the very first short story about Sherlock Holmes, published in 1891 in The Strand Magazine. The King of Bohemia hires Holmes to retrieve a compromising photograph from Irene Adler, a former opera singer — but for once, Holmes meets someone whose intelligence matches his own, and the case doesn't end the way he, or the reader, expects.`,
+        facts: [
+          `Conan Doyle based Holmes's method of deduction — reading a stranger's whole history from small physical details — on Dr. Joseph Bell, one of his real medical school teachers at the University of Edinburgh, who was famous for doing exactly that with patients.`,
+          `Doyle grew so tired of writing Holmes stories that in 1893 he killed his detective off, sending him over a waterfall in "The Final Problem." Public outcry was so fierce that Doyle brought him back nearly a decade later — some readers reportedly wore black armbands in mourning when Holmes "died."`,
+          `Irene Adler appears in only this single story out of the 56 Sherlock Holmes short stories Doyle wrote — yet she's become so iconic that many adaptations mistakenly turn her into a recurring love interest, which isn't how Doyle wrote her at all.`
+        ]
+      }
+    },
+    verdictOptions: [
+      "The Defining Article (THE woman)",
+      "Hyperbole (eclipses her whole sex)",
+      "The Mechanical Metaphor (reasoning machine)",
+      "Foreshadowing Through Understatement (a false position)",
+      "The Extended Metaphor (grit and cracked lenses)",
+      "The Ironic Undercutting (dubious and questionable memory)"
+    ]
   }
 };
 
@@ -1424,6 +1532,20 @@ function closeConfirmModal() {
   document.getElementById('confirmOverlay').style.display = 'none';
 }
 
+function showPromotionModal(rank, closedCount) {
+  const isLegendary = rank.title === "Legendary Detective";
+  document.getElementById('promotionIcon').textContent = rank.icon;
+  document.getElementById('promotionTitle').textContent = rank.title;
+  document.getElementById('promotionBody').textContent = isLegendary
+    ? `Every case on the board, closed. That's the full set — a genuinely impressive run of close reading.`
+    : `Case ${closedCount} closed. The agency is promoting you to ${rank.title}.`;
+  document.getElementById('promotionOverlay').style.display = 'flex';
+}
+
+function closePromotionModal() {
+  document.getElementById('promotionOverlay').style.display = 'none';
+}
+
 function resetProgress() {
   showConfirmModal(
     "This clears all progress across every case — clues found, quiz answers, essay progress, and verdicts. This can't be undone. Reset anyway?",
@@ -1440,7 +1562,32 @@ function resetProgress() {
 
 /* =================== BOARD =================== */
 /* =================== CASE ORDER / SEQUENTIAL UNLOCK =================== */
-const CASE_ORDER = ['gatsby', 'cities', 'trolls', 'skellig_fear', 'earnest'];
+const CASE_ORDER = ['gatsby', 'cities', 'trolls', 'skellig_fear', 'earnest', 'holmes'];
+
+/* =================== FIELD RANK (PROMOTION) =================== */
+const FIELD_RANKS = [
+  { min: 0, title: "Rookie Recruit", icon: "🔍" },
+  { min: 1, title: "Trainee Detective", icon: "🕵️" },
+  { min: 2, title: "Junior Detective", icon: "🧭" },
+  { min: 3, title: "Field Detective", icon: "🗂️" },
+  { min: 4, title: "Senior Detective", icon: "🎖️" },
+  { min: 5, title: "Master Detective", icon: "🏆" }
+];
+
+function countClosedCases() {
+  return CASE_ORDER.reduce((n, key) => n + (progress[key] && progress[key].verdict ? 1 : 0), 0);
+}
+
+function getFieldRank(closedCount) {
+  if (CASE_ORDER.length > 0 && closedCount >= CASE_ORDER.length) {
+    return { title: "Legendary Detective", icon: "👑" };
+  }
+  let rank = FIELD_RANKS[0];
+  for (const r of FIELD_RANKS) {
+    if (closedCount >= r.min) rank = r;
+  }
+  return rank;
+}
 
 function isUnlocked(key) {
   const idx = CASE_ORDER.indexOf(key);
@@ -1517,6 +1664,9 @@ function renderBoard() {
 
   document.getElementById('overallClues').textContent = `${totalCluesFound} / ${totalCluesMax}`;
   document.getElementById('overallCases').textContent = `${casesClosed} / ${CASE_ORDER.length}`;
+
+  const rank = getFieldRank(casesClosed);
+  document.getElementById('overallRank').textContent = `${rank.icon} ${rank.title}`;
 
   const methodCount = methodDetectiveCount();
   const methodBlock = document.getElementById('methodStatBlock');
@@ -2125,6 +2275,10 @@ function buildVerdict() {
   const book = bookBtn ? bookBtn.dataset.v : "hasn't decided yet";
   const trick = document.getElementById('stealTrick').value.trim();
 
+  const wasAlreadyClosed = !!p.verdict;
+  const closedBefore = countClosedCases();
+  const rankBefore = getFieldRank(closedBefore);
+
   p.verdict = { fav, why, book, trick, stars: starRatingActive };
   p.starRating = starRatingActive;
 
@@ -2132,6 +2286,14 @@ function buildVerdict() {
   document.getElementById('verdictCard').style.display = 'block';
   document.getElementById('verdictCard').scrollIntoView({behavior:'smooth', block:'center'});
   saveProgress();
+
+  if (!wasAlreadyClosed) {
+    const closedAfter = countClosedCases();
+    const rankAfter = getFieldRank(closedAfter);
+    if (rankAfter.title !== rankBefore.title) {
+      setTimeout(() => showPromotionModal(rankAfter, closedAfter), 500);
+    }
+  }
 }
 
 function fillVerdictCard(key, v) {
