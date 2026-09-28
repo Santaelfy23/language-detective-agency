@@ -660,6 +660,52 @@
     font-family:inherit;
   }
 
+  #companionView .rc-case-link {
+    display:inline-block;
+    margin:10px 0 4px;
+    background:none;
+    border:1px solid var(--rc-brass);
+    color:var(--rc-green-dark);
+    border-radius:3px;
+    padding:6px 12px;
+    font-size:0.85rem;
+    cursor:pointer;
+    font-family:'Source Serif 4', Georgia, serif;
+  }
+  #companionView .rc-case-link:hover { background:var(--rc-brass-light); color:#fff8e8; }
+
+  #companionView .rc-reveal-btn {
+    display:block;
+    margin:8px 0 0;
+    background:none;
+    border:1px dashed var(--rc-brass);
+    color:var(--rc-green-dark);
+    border-radius:3px;
+    padding:6px 12px;
+    font-size:0.85rem;
+    cursor:pointer;
+    font-family:'Source Serif 4', Georgia, serif;
+    text-align:left;
+  }
+  #companionView .rc-reveal-btn:hover { background:#f8f0da; }
+
+  #companionView .rc-guidance-box {
+    display:none;
+    margin-top:8px;
+    padding:10px 14px;
+    background:var(--rc-paper-dark);
+    border-left:3px solid var(--rc-brass);
+    border-radius:3px;
+    font-size:0.9rem;
+    color:#4a3e26;
+    line-height:1.5;
+  }
+  #companionView .rc-guidance-box.show { display:block; }
+  #companionView .rc-guidance-box.rc-guidance-parent em {
+    color:#8a7a55;
+    font-size:0.82rem;
+  }
+
   @media (prefers-reduced-motion: reduce){#companionView .card-body, #companionView .flip-inner, #companionView .journey-fill, #companionView .journey-engine, #companionView .badge { transition:none !important; }
   }
 
@@ -1257,20 +1303,20 @@ The party has begun.</div>
 
   trolls: {
     meta: {
-      num: "CASE FILE NO. 11", title: "The Trolls' Feast",
+      num: "CASE FILE NO. 17", title: "The Trolls' Feast",
       author: `J.R.R. Tolkien, The Hobbit — Chapter 2, "Roast Mutton"`,
       desc: "A restricted document. You'll need to retrieve the original from your own collection to investigate.",
       totalClues: 5, restricted: true
     },
     stage1: {
-      label: `CASE FILE NO. 11 &middot; THE HOBBIT, J.R.R. TOLKIEN`,
+      label: `CASE FILE NO. 17 &middot; THE HOBBIT, J.R.R. TOLKIEN`,
       title: "This file is restricted.",
       brief: `This case is different from the others. The Hobbit is still protected by copyright, so the agency can't print the original pages here — the only copy on record is the one in your own collection. To investigate, you'll need to retrieve it.`,
       restrictedInstructions: `Go and find your copy of <em>The Hobbit</em>. Turn to <strong>Chapter 2, "Roast Mutton"</strong> — the scene where Bilbo and the dwarves run into three trolls in the woods. You don't need to reread the whole chapter yet. Just have the book open and ready on that chapter.`,
       prompt: "Once you've got the book open on Chapter 2, you're ready to start the investigation."
     },
     stage2: {
-      label: "CASE FILE NO. 11 &middot; INVESTIGATE",
+      label: "CASE FILE NO. 17 &middot; INVESTIGATE",
       title: "Five leads. Your book is the evidence.",
       brief: `For each lead below: first try to recall the moment from memory. Then flip to that part of Chapter 2 and reread it properly in your actual book. Only once you've reread it, declassify the lead to see what technique Tolkien was using.`,
       leads: [
@@ -1376,20 +1422,20 @@ The party has begun.</div>
 
   skellig_fear: {
     meta: {
-      num: "CASE FILE NO. 12", title: "Fear and Hope, Side by Side",
+      num: "CASE FILE NO. 18", title: "Fear and Hope, Side by Side",
       author: "David Almond, Skellig",
       desc: "A restricted document. You've read this one before — this time, reread it as a detective, not a first-time reader.",
       totalClues: 4, restricted: true
     },
     stage1: {
-      label: "CASE FILE NO. 12 &middot; SKELLIG, DAVID ALMOND",
+      label: "CASE FILE NO. 18 &middot; SKELLIG, DAVID ALMOND",
       title: "You already know how this one ends.",
       brief: `This case looks at the chapters where the baby's illness becomes serious, and Michael's family is frightened and waiting. You've read this book before, so you already know the baby is okay in the end. That's actually useful here — you're not reading to find out what happens, you're free to study <em>how Almond writes fear on the page</em>, the way a detective studies a scene rather than living through it.`,
       restrictedInstructions: `Go and find your copy of <em>Skellig</em>. Turn to the chapters roughly in the middle of the book, after Michael and Mina have already found Skellig in the garage — the chapters where the baby becomes seriously ill and the family is waiting anxiously, some of it at the hospital. You don't need to reread everything yet. Just get the book open on that stretch of the story.`,
       prompt: "Once you've got the book open on that part of the story, you're ready to start the investigation."
     },
     stage2: {
-      label: "CASE FILE NO. 12 &middot; INVESTIGATE",
+      label: "CASE FILE NO. 18 &middot; INVESTIGATE",
       title: "Four leads. Your book is the evidence.",
       brief: `For each lead below: first try to recall the moment from memory. Then flip to that part of the book and reread it properly. Only once you've reread it, declassify the lead to see what technique Almond was using.`,
       leads: [
@@ -1484,14 +1530,14 @@ The party has begun.</div>
 
   earnest: {
     meta: {
-      num: "CASE FILE NO. 13", title: "The Cucumber Sandwich Case",
+      num: "CASE FILE NO. 19", title: "The Cucumber Sandwich Case",
       author: "Oscar Wilde, The Importance of Being Earnest",
       desc: "A comedy built entirely out of elegant contradictions. Find six hidden clues in one scene.",
       totalClues: 6
     },
     readAloudEnabled: true,
     stage1: {
-      label: "CASE FILE NO. 13 &middot; THE IMPORTANCE OF BEING EARNEST, OSCAR WILDE",
+      label: "CASE FILE NO. 19 &middot; THE IMPORTANCE OF BEING EARNEST, OSCAR WILDE",
       title: "Just read it. Notice what sounds... backwards.",
       brief: `This is from Act 1 of Oscar Wilde's <em>The Importance of Being Earnest</em>, first performed in 1895. Algernon and his friend Jack are having afternoon tea. Don't hunt for tricks yet — just read it, and notice if anything makes you smile without quite knowing why.`,
       passage: `ALGERNON. I really don't see anything romantic in proposing. It is very romantic to be in love. But there is nothing romantic about a definite proposal. Why, one may be accepted. One usually is, I believe. Then the excitement is all over. The very essence of romance is uncertainty. If ever I get married, I'll certainly try to forget the fact.
@@ -1506,7 +1552,7 @@ ALGERNON. That is quite a different matter. She is my aunt. [Takes plate from be
       prompt: "Before you move on — which line made you smile, even if you're not sure why yet?"
     },
     stage2: {
-      label: "CASE FILE NO. 13 &middot; INVESTIGATE",
+      label: "CASE FILE NO. 19 &middot; INVESTIGATE",
       title: "Six clues are hiding in this one scene.",
       brief: `Same text — but now click on any phrase that looks suspicious, like Wilde might be pulling a trick. Each one reveals what's really going on.`,
       segments: [
@@ -1631,21 +1677,21 @@ ALGERNON. Yes; and that the happy English home has proved in half the time.</div
 
   holmes: {
     meta: {
-      num: "CASE FILE NO. 14", title: "The Woman",
+      num: "CASE FILE NO. 20", title: "The Woman",
       author: "Sir Arthur Conan Doyle, A Scandal in Bohemia",
       desc: "The witness insists he never felt a thing. Find six hidden clues in the opening.",
       totalClues: 6
     },
     readAloudEnabled: true,
     stage1: {
-      label: "CASE FILE NO. 14 &middot; A SCANDAL IN BOHEMIA, ARTHUR CONAN DOYLE",
+      label: "CASE FILE NO. 20 &middot; A SCANDAL IN BOHEMIA, ARTHUR CONAN DOYLE",
       title: "Just read it. Notice how a character gets introduced.",
       brief: `This is the opening paragraph of "A Scandal in Bohemia," published in 1891 — the very first Sherlock Holmes short story. Dr. Watson, Holmes's friend and narrator, is telling us about a woman named Irene Adler before the mystery has even started. Don't hunt for tricks yet — just read it, and notice what kind of man this makes Holmes sound like.`,
       passage: "To Sherlock Holmes she is always THE woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. He never spoke of the softer passions, save with a gibe and a sneer. They were admirable things for the observer—excellent for drawing the veil from men's motives and actions. But for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. Grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. And yet there was but one woman to him, and that woman was the late Irene Adler, of dubious and questionable memory.",
       prompt: "Before you move on — what kind of person does this description make Holmes sound like to you?"
     },
     stage2: {
-      label: "CASE FILE NO. 14 &middot; INVESTIGATE",
+      label: "CASE FILE NO. 20 &middot; INVESTIGATE",
       title: "Six clues are hiding in this introduction.",
       brief: `Same text — but now click on any phrase that looks suspicious, like Doyle might be pulling a trick. Each one reveals what's really going on.`,
       segments: [
@@ -1737,13 +1783,13 @@ ALGERNON. Yes; and that the happy English home has proved in half the time.</div
 
   pride_prejudice: {
     meta: {
-      num: "CASE FILE NO. 15", title: "A Truth Universally Acknowledged",
+      num: "CASE FILE NO. 21", title: "A Truth Universally Acknowledged",
       author: "Jane Austen, Pride and Prejudice — Chapter 1",
       desc: "A 'universal truth' turns out to be one family's private obsession. Find seven hidden clues in the opening chapter.",
       totalClues: 7
     },
     stage1: {
-      label: "CASE FILE NO. 15 &middot; PRIDE AND PREJUDICE, JANE AUSTEN",
+      label: "CASE FILE NO. 21 &middot; PRIDE AND PREJUDICE, JANE AUSTEN",
       title: "Just read it. Notice the game being played underneath.",
       brief: `This is the opening chapter of Pride and Prejudice, published in 1813 — one of the most famous first lines in English literature. Mr and Mrs Bennet have five unmarried daughters, and a rich single man has just moved in nearby. Read it once, cold. Don't hunt for tricks yet — just notice who seems to be winning this conversation.`,
       passage: `It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.
@@ -1772,7 +1818,7 @@ Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and c
       prompt: "Before you move on — who comes across as smarter here, Mr Bennet or Mrs Bennet? And who do you think the narrator actually agrees with?"
     },
     stage2: {
-      label: "CASE FILE NO. 15 &middot; INVESTIGATE",
+      label: "CASE FILE NO. 21 &middot; INVESTIGATE",
       title: "Seven clues are hiding in this chapter.",
       brief: `Same text — but now click on any phrase that looks like it's doing more work than it first appears to.`,
       segments: [
@@ -1899,13 +1945,13 @@ The astonishment of the ladies was just what he wished—that of Mrs. Bennet per
 
   secret_garden: {
     meta: {
-      num: "CASE FILE NO. 16", title: "The Garden Nobody Had Seen",
+      num: "CASE FILE NO. 22", title: "The Garden Nobody Had Seen",
       author: "Frances Hodgson Burnett, The Secret Garden — Chapter 9",
       desc: "A locked garden, ten years untouched. Find seven hidden clues in the moment it's finally opened.",
       totalClues: 7
     },
     stage1: {
-      label: "CASE FILE NO. 16 &middot; THE SECRET GARDEN, FRANCES HODGSON BURNETT",
+      label: "CASE FILE NO. 22 &middot; THE SECRET GARDEN, FRANCES HODGSON BURNETT",
       title: "Just read it. Notice how much work the description is doing.",
       brief: `Mary Lennox — a sour, lonely girl sent to live at her uncle's gloomy manor — has just found the key to a garden that's been locked and abandoned for ten years, ever since her aunt died. This is the exact moment she steps inside for the first time. Read it once, cold — just notice how it makes you feel before you go hunting for tricks.`,
       passage: `It was the sweetest, most mysterious-looking place any one could imagine. The high walls which shut it in were covered with the leafless stems of climbing roses which were so thick that they were matted together. Mary Lennox knew they were roses because she had seen a great many roses in India.
@@ -1916,7 +1962,7 @@ There were neither leaves nor roses on them now and Mary did not know whether th
       prompt: "Before you move on — what's the mood of this passage? Is it a happy discovery, a scary one, or something in between?"
     },
     stage2: {
-      label: "CASE FILE NO. 16 &middot; INVESTIGATE",
+      label: "CASE FILE NO. 22 &middot; INVESTIGATE",
       title: "Seven clues are hiding in this passage.",
       brief: `Same text — click on any phrase where Burnett seems to be doing more than just describing plants.`,
       segments: [
@@ -2790,6 +2836,438 @@ The cabin glowed red. A paraffin lamp was burning calmly in an orange mist.`,
       "Eerie Calm Amid Danger"
     ]
   }
+,
+
+  railway_ch9: {
+    meta: {
+      num: "CASE FILE NO. 11", title: "Charity Goings-On",
+      author: "E. Nesbit, The Railway Children — Chapter 9: The Pride of Perks",
+      desc: "The children throw Perks a surprise birthday collection. He is furious about it. Find five hidden clues in his outburst.",
+      totalClues: 5
+    },
+    stage1: {
+      label: "CASE FILE NO. 11 &middot; THE RAILWAY CHILDREN, E. NESBIT",
+      title: "Just read it. Notice how surprising his anger is.",
+      brief: `The children have spent days secretly collecting birthday gifts for Perks the porter — tea, a pipe, eggs, even a second-hand perambulator — from villagers who admire him. They present the pile proudly. This is not the reaction they expected.`,
+      passage: `"I don't care," he said. "I won't stand it, and so I tell you straight. [...] I'm not going to begin these sort of charity goings-on at my time of life, so don't you think it, Nell."`,
+      prompt: "Before you move on — the children meant this entirely as kindness. Why might Perks have heard it as an insult instead?"
+    },
+    stage2: {
+      label: "CASE FILE NO. 11 &middot; INVESTIGATE",
+      title: "Five clues are hiding in this outburst.",
+      brief: `Same short passage — click on any phrase where Perks's pride is doing more work than his actual anger.`,
+      segments: [
+        {id:1, text:`"I don't care,"`},
+        " he said. ",
+        {id:2, text:`"I won't stand it, and so I tell you straight.`},
+        ` [...] I'm not going to begin these sort of `,
+        {id:3, text:"charity goings-on"},
+        {id:4, text:" at my time of life,"},
+        " so don't you think it, ",
+        {id:5, text:'Nell."'}
+      ],
+      clueData: {
+        1: {title:"A Defensive Opening", text:"'I don't care' is the kind of thing people say when they very much DO care — it's a brittle, protesting-too-much opening line, and it signals wounded pride rather than real indifference before he's said anything else."},
+        2: {title:"Treating a Gift as an Attack", text:"'I won't stand it' is the language of resistance — as if something has been done TO him. Nesbit lets Perks's own words reveal that he's experiencing a birthday gift as an assault on his dignity, which is exactly the misunderstanding this chapter turns on."},
+        3: {title:"A Loaded Word Choice", text:"'Charity' is doing enormous work here. The children never called it that — but the word reframes a village's warm birthday gift as proof of his poverty. Swap in 'presents' or 'gifts' and the whole sentence loses its sting."},
+        4: {title:"Adult Dignity, Aimed at Children", text:"'At my time of life' is language for another adult, not for three children — it signals this isn't really about Bobbie, Peter, and Phyllis at all. It's about how Perks imagines the whole village must now see him."},
+        5: {title:"Who He's Actually Talking To", text:"Notice the name at the end: Nell is his wife, not one of the children. Even mid-outburst, Perks can't quite bring himself to scold the children to their faces — he vents to Nell instead, which tells you more about his real feelings toward them than his words do."}
+      }
+    },
+    quiz: [
+      {q:"Why does Perks say 'charity goings-on' instead of 'gifts' or 'presents'?", opts:["He believes 'charity' is the correct legal word for it","The word 'charity' reframes a kindly-meant gift as proof of his poverty — a chosen insult","He's quoting something Nell said earlier","It's a private family joke"], correct:1, explain:"Swap 'charity' for 'gifts' and the sentence loses almost all its sting — the word choice IS the misunderstanding."},
+      {q:"Who does Perks actually direct his angry speech to?", opts:["Bobbie, directly","The Old Gentleman","His wife, Nell","The narrator"], correct:2, explain:"He can't quite bring himself to be truly angry at the children to their faces — venting to Nell instead is a clue that this is wounded pride, not real hostility toward them."},
+      {q:"What does 'I won't stand it' suggest about how Perks is experiencing this moment?", opts:["Calm acceptance","That he feels attacked, and is resisting", "Amusement","Total indifference"], correct:1, explain:"'Stand it' is the language of enduring an assault — Perks is treating a gift as though it were being done TO him."},
+      {q:"Based only on the chapter's title, 'The Pride of Perks' — and before knowing how the chapter resolves — what does 'pride' most likely mean here?", opts:["Perks is proud of his job title","Perks's self-respect briefly makes him misread kindness as pity","Perks is arrogant toward the children","Perks is proud of Nell"], correct:1, explain:"'Pride' here is double-edged — the same self-respect that makes Perks a dignified, hardworking man is exactly what makes him wince at anything that looks like charity."}
+    ],
+    stage3: {
+      lockText: "Answer all four questions to unlock the full case file.",
+      headerHTML: `<p>This is a short, almost entirely comic chapter — but it's doing careful work underneath the comedy, and it sits in a very particular spot in the book.</p>`,
+      chapters: [
+        {heading:"Evidence, Read Aloud", body:`Perks's fury doesn't get argued away — it gets resolved by Bobbie reading out loud the handwritten labels tied to each gift, which turn out to be full of warmth and respect, not pity. That's worth noticing: the book keeps solving its misunderstandings by producing physical evidence — labels, letters, a scrap of newspaper — rather than by someone simply explaining their feelings. This chapter is the last time that pattern plays out safely and comically. The very next chapter, a scrap of newspaper produces evidence of a completely different, much darker kind.`},
+        {heading:"A List That's Really a Portrait", body:`The gifts themselves — tea, a pipe, eggs, honey, a second-hand perambulator — are an odd, specific, slightly funny list. But taken together, they're a small portrait of an entire village's affection, assembled item by item from people who each thought of Perks individually. Perks can't see this while he's angry; the reader can, because Nesbit shows us the whole list before showing us his reaction. That gap between what the reader already knows and what the angry character doesn't yet know is its own quiet kind of dramatic irony — different from the more dangerous kind Peter uses on Bobbie in the burning-barge chapter, but built the same way.`},
+        {heading:"Comedy Now, Undercutting Later", body:`Compare this to the amateur-firemen chapter: there, Nesbit undercuts real danger with a small, human, funny detail ("Of course it didn't"). Here, she does something like the reverse — a comic misunderstanding gets undercut by something genuinely tender (the labels), rather than danger being undercut by comedy. Same author, same instinct for deflating a big emotional moment with something small and concrete — just running in the opposite direction.`},
+        {heading:"The Last Ordinary Morning", body:`Structurally, this is the last chapter in the book that is purely, uncomplicatedly happy. From the next chapter on, the story's emotional register changes permanently — even its lightest moments afterward carry Bobbie's private knowledge underneath them. Read this way, Chapter 9 isn't filler between more important chapters; it's the calm the rest of the book will be measured against.`}
+      ],
+      closingHTML: `<p>Look back at Perks's five words — "at my time of life" — one more time. A grown man, worried about his dignity in front of an entire village, said almost entirely to his wife rather than to the children who caused it. That's a lot of characterization packed into a five-word phrase.</p>`,
+      takeaway: "A single loaded word ('charity') can flip a kind act into a perceived insult — and who a character chooses to address, even mid-outburst, can reveal more than what they say.",
+      aboutBook: {
+        overview: "Chapter 9 of The Railway Children (1906) is built almost entirely around a single misunderstanding and its resolution — one of the few chapters with no danger, secret, or crisis at its center.",
+        facts: [
+          "This is the only one of the book's fourteen chapters where the central conflict is fully resolved by the end of the same chapter, rather than carrying forward.",
+          "The list of village-gathered gifts (tea, a pipe, eggs, honey, a perambulator) is presented without any single villager ever appearing on the page — we meet the village entirely through what it chooses to give.",
+          "'Charity' carried a sharper, more class-loaded sting in early-1900s England than it typically does today, closer to 'pity for the poor' than simple generosity — which is part of why the word wounds Perks as hard as it does."
+        ]
+      }
+    },
+    verdictOptions: [
+      "A Defensive Opening",
+      "Treating a Gift as an Attack",
+      "A Loaded Word Choice",
+      "Adult Dignity, Aimed at Children",
+      "Who He's Actually Talking To"
+    ]
+  },
+
+  railway_ch10: {
+    meta: {
+      num: "CASE FILE NO. 12", title: "Five Years' Penal Servitude",
+      author: "E. Nesbit, The Railway Children — Chapter 10: The Terrible Secret",
+      desc: "Bobbie unwraps a parcel of magazines from Perks — and reads something never meant for a child's eyes. Find five hidden clues in the discovery.",
+      totalClues: 5
+    },
+    stage1: {
+      label: "CASE FILE NO. 12 &middot; THE RAILWAY CHILDREN, E. NESBIT",
+      title: "Just read it. Notice how short and separate each sentence is.",
+      brief: `Perks has given Peter a bundle of old magazines wrapped in newspaper. While she waits with Peter and Phyllis, Bobbie idly starts reading the wrapping paper itself.`,
+      passage: `What she had read was headed, "End of the Trial. Verdict. Sentence." The name of the man who had been tried was the name of her Father. The verdict was "Guilty." And the sentence was "Five years' Penal Servitude."`,
+      prompt: "Read it again. Why might Nesbit have chosen four short, separate sentences here instead of one flowing one?"
+    },
+    stage2: {
+      label: "CASE FILE NO. 12 &middot; INVESTIGATE",
+      title: "Five clues are hiding in this discovery.",
+      brief: `Same short passage — click on any phrase doing more than simply reporting what Bobbie read.`,
+      segments: [
+        {id:1, text:`What she had read was headed, "End of the Trial. Verdict. Sentence."`},
+        " ",
+        {id:2, text:"The name of the man who had been tried was the name of her Father."},
+        " ",
+        {id:3, text:`The verdict was "Guilty."`},
+        " ",
+        {id:4, text:`And the sentence was "Five years' Penal Servitude."`},
+        {id:5, text:""}
+      ],
+      clueData: {
+        1: {title:"A Headline, Not a Story", text:"'End of the Trial. Verdict. Sentence.' reads almost like a court notice or a newspaper headline — cold, clipped, official. It's the language of a document, not of a narrator telling us how to feel."},
+        2: {title:"The Delayed Reveal", text:"Nesbit holds the word 'Father' until the very last possible moment in this sentence. The reader — and Bobbie — has to travel through the whole clause not yet knowing whose name it is."},
+        3: {title:"One Word, Alone", text:"'Guilty' gets an entire short sentence to itself, in quotation marks, with nothing around it to soften it. Nothing explains it, qualifies it, or comments on it."},
+        4: {title:"Piling On, Flatly", text:"'And' starting a sentence, followed by a precise legal phrase, adds one more blow in exactly the same flat tone as the last. No sentence here is longer or more dramatic than the one before it."},
+        5: {title:"What the Narrator Leaves Out", text:"Nowhere in this paragraph does the narrator tell us Bobbie is horrified, or describe her face, or her breathing. The bare facts arrive the way Bobbie is reading them — one at a time, unexplained — and the reader has to supply the shock, not be told it."}
+      }
+    },
+    quiz: [
+      {q:"Why might Nesbit have written this discovery in four short, separate sentences rather than one longer, more descriptive one?", opts:["Because short sentences are easier to translate","It makes the reader experience the facts arriving one at a time, the way Bobbie is reading them", "It's simply how newspapers write", "To make the chapter longer"], correct:1, explain:"The choppy, headline-like rhythm mimics the experience of reading something shocking off a page, fact by fact, rather than being told a smooth story about it."},
+      {q:"Where does the word 'Father' appear in the sentence that reveals whose trial this is?", opts:["At the very beginning","In the middle","At the very end", "It never appears"], correct:2, explain:"Nesbit delays it to the last possible moment, so the reader doesn't know whose name it is until the sentence is nearly finished — a small, deliberate withholding."},
+      {q:"What kind of tone do phrases like 'End of the Trial. Verdict. Sentence.' create?", opts:["Warm and comforting","Cold, official, almost like a document","Playful","Confused"], correct:1, explain:"The clipped, headline-like phrasing borrows the voice of a newspaper or a court record, not a storyteller."},
+      {q:"The narrator never directly says 'Bobbie was horrified.' What's the effect of leaving that out?", opts:["It's a mistake in the writing","It shows the facts plainly and lets the reader supply the emotion themselves","It means Bobbie wasn't upset","It's meant to be funny"], correct:1, explain:"This is 'show, don't tell' — bare, unembellished facts carry the weight instead of a stated emotion, forcing the reader into the same numb shock Bobbie is in."}
+    ],
+    stage3: {
+      lockText: "Answer all four questions to unlock the full case file.",
+      headerHTML: `<p>This four-sentence paragraph is the hinge the entire book turns on. Everything before it has been leading here; everything after it is shaped by it.</p>`,
+      chapters: [
+        {heading:"The First Secret That Doesn't Resolve", body:`Every mystery so far in the book — Father's disappearance, misunderstandings with Perks, the odd behavior of the Old Gentleman — has turned out to have an innocent or fixable explanation by the end of its own chapter. This is the first one that doesn't. Structurally, it's the shortest chapter in the book so far, and its prose is the starkest — Nesbit matches the form of the writing to the size of the news.`},
+        {heading:"An Evasion, Finally Broken", body:`Back in Chapter 1, Mother tells the children only that "Father's been called away — on business," a deliberately vague, protective lie. For nine chapters, that evasion has held. This chapter is where it finally breaks down — not because an adult decides to tell the truth, but because a child stumbles onto it by accident, through a piece of wrapping paper never meant for her eyes at all. The protection Mother built in Chapter 1 turns out to be fragile precisely because it depended on nobody looking too closely at ordinary things.`},
+        {heading:"A Secret Bobbie Now Carries Alone", body:`Immediately after this paragraph, Phyllis calls Bobbie in to tea, and Bobbie has to go — carrying what she now knows without being able to say a word of it to Peter or Phyllis. This is the first time in the book Bobbie is genuinely alone with something this heavy, and it marks a real shift in her role in the story: from this chapter on, she is the one holding information the others don't have.`},
+        {heading:"After the Last Easy Chapter", body:`Coming directly after Perks's birthday chapter — the last purely comic, low-stakes chapter in the book — this placement isn't an accident. Nesbit gives the reader one final ordinary, funny morning before permanently changing what kind of book this is.`}
+      ],
+      closingHTML: `<p>Four short sentences, no adjectives, no description of Bobbie's face — and yet this is very likely the most devastating paragraph in the entire book. That's the paragraph's whole technique.</p>`,
+      takeaway: "Sometimes the most emotionally powerful writing is the plainest — bare, undecorated facts, delivered in short sentences, can hit harder than any amount of description.",
+      aboutBook: {
+        overview: "Chapter 10 marks the tonal turning point of The Railway Children (1906) — the moment the story's central, real-world crisis is finally named on the page.",
+        facts: [
+          "'Penal servitude' was a genuine category of criminal sentence in England at the time the book was written, involving imprisonment with hard labor — the term itself, quoted directly from the newspaper, is doing real historical work, not just dramatic work.",
+          "This is the only chapter in the book where a major plot revelation reaches the reader through an object (a scrap of newspaper) rather than through dialogue or narration directly addressed to the reader.",
+          "Nesbit originally published The Railway Children as a serial before it appeared as a single novel — meaning original readers would have finished this chapter and then had to wait for the next installment before learning anything more."
+        ]
+      }
+    },
+    verdictOptions: [
+      "A Headline, Not a Story",
+      "The Delayed Reveal",
+      "One Word, Alone",
+      "Piling On, Flatly",
+      "What the Narrator Leaves Out"
+    ]
+  },
+
+  railway_ch11: {
+    meta: {
+      num: "CASE FILE NO. 13", title: "The Boy Who Didn't Move",
+      author: "E. Nesbit, The Railway Children — Chapter 11: The Hound in the Red Jersey",
+      desc: "A paper-chase 'hound' vanishes into a tunnel and doesn't come out. Find five hidden clues in the moment he's found.",
+      totalClues: 5
+    },
+    stage1: {
+      label: "CASE FILE NO. 13 &middot; THE RAILWAY CHILDREN, E. NESBIT",
+      title: "Just read it. Notice the order the details arrive in.",
+      brief: `About thirty runners have just played "hare and hounds" — a paper chase — through the countryside, following a trail of torn paper. One "hound," in a red jersey, went into the railway tunnel and never came out the other side. The children go in after him with a candle.`,
+      passage: `There, by the curved, pebbly down line, was the red-jerseyed hound. His back was against the wall, his arms hung limply by his sides, and his eyes were shut.`,
+      prompt: "Read it again — this sentence builds through three details about his body, one after another. What order are they in, and why might that order matter?"
+    },
+    stage2: {
+      label: "CASE FILE NO. 13 &middot; INVESTIGATE",
+      title: "Five clues are hiding in this discovery.",
+      brief: `Same short passage — click on any phrase where the description is doing more than just telling us where he is.`,
+      segments: [
+        "There, by the curved, pebbly down line, was the ",
+        {id:1, text:"red-jerseyed hound"},
+        ". ",
+        {id:2, text:"His back was against the wall,"},
+        " ",
+        {id:3, text:"his arms hung limply by his sides,"},
+        " and ",
+        {id:4, text:"his eyes were shut."},
+        {id:5, text:""}
+      ],
+      clueData: {
+        1: {title:"Still Called By His Costume", text:"He's still described as 'the red-jerseyed hound' — his game role, not his name. The children (and the reader) don't yet know this is a real, badly hurt boy; we only know the costume of a game that is clearly already over."},
+        2: {title:"Detail One: Just a Posture", text:"'His back was against the wall' — on its own, this could still just mean he's resting or catching his breath. The sentence doesn't tell us to worry yet."},
+        3: {title:"Detail Two: The Word That Changes Everything", text:"'Limply' is the key word in the whole sentence. Arms can hang at rest, at ease, or limply — and 'limply' is the one word here that isn't a relaxed posture. It's the first real signal something is wrong."},
+        4: {title:"Detail Three: Confirmation", text:"'His eyes were shut' arrives last and confirms what 'limply' already suggested. The sentence has been building toward this the entire time."},
+        5: {title:"Escalation By List, Not By Adjective", text:"Instead of writing 'he was unconscious,' Nesbit lets the reader assemble that conclusion detail by detail — back, arms, eyes — in the same order the children themselves would notice them, walking up with a single candle in the dark."}
+      }
+    },
+    quiz: [
+      {q:"Why does Nesbit describe the boy through three separate physical details rather than simply writing 'he was unconscious'?", opts:["To make the sentence longer","So the reader assembles the alarming conclusion gradually, the same way the children discovering him would", "Because 'unconscious' wasn't a common word in 1906","It's a mistake"], correct:1, explain:"Building the realization detail-by-detail lets the reader experience the dawning alarm rather than being told the outcome outright."},
+      {q:"Which single word in this passage first signals that something is seriously wrong, rather than the boy simply resting?", opts:["'red-jerseyed'","'pebbly'","'limply'","'down line'"], correct:2, explain:"Arms can hang many ways at rest — 'limply' is the one word that isn't a relaxed posture, and it's the turning point of the sentence."},
+      {q:"Why might Nesbit still call him 'the red-jerseyed hound' at this exact moment, instead of giving his name?", opts:["Because Nesbit hadn't decided his name yet","Because the children don't know he's a real, hurt boy yet — only the costume of a game","Because it's funnier that way","Because his jersey is the most important object in the scene"], correct:1, explain:"The game's language is still being used even though the game is clearly over — a small but telling gap between what's known and what's about to be discovered."},
+      {q:"What technique connects 'back,' 'arms,' and 'eyes' in this single sentence?", opts:["Alliteration","A list that escalates from a neutral detail to an alarming one","Rhyme","Repetition of the same word"], correct:1, explain:"The list moves from something ambiguous (his back against the wall) to something unambiguous (his eyes shut), building tension as it goes."}
+    ],
+    stage3: {
+      lockText: "Answer all four questions to unlock the full case file.",
+      headerHTML: `<p>This chapter changes the emotional weather of the book again — not with a document this time, but with a body, found in the dark.</p>`,
+      chapters: [
+        {heading:"Known By Role Before Known By Self", body:`Calling him "the red-jerseyed hound" at the very moment he's found is a small example of a pattern that runs through the whole book: people are often introduced by their function or role well before the reader learns who they really are. The Old Gentleman is "the Old Gentleman" for most of the book before any fuller identity is attached to him. Here, the pattern happens inside a single sentence — game-costume first, real person revealed only afterward.`},
+        {heading:"Two Different Tools for Two Different Dreads", body:`Compare this sentence's technique to Chapter 10's. There, dread built through short, flat, separated sentences reporting bare facts. Here, dread builds through a single sentence containing an escalating LIST of physical details. Both withhold the emotional conclusion and make the reader assemble it — but one uses fragmentation, and the other uses accumulation within one continuous sentence.`},
+        {heading:"A Candle, and What It Can't Light", body:`The children enter the tunnel roughly 150 yards with a single candle to find him — a small, physically dark detail that arrives right after a chapter built entirely around something the family has been keeping in the dark. Nesbit doesn't comment on this connection directly; she simply places a literal darkness immediately after a chapter about a hidden truth, and lets the parallel sit there unexplained.`},
+        {heading:"A Stranger Who Won't Stay a Stranger", body:`Finding an unknown, injured boy in a tunnel looks, on the surface, like a self-contained rescue chapter. But this is the last time in the book that Jim is simply "the hound in the red jersey" — an anonymous costume rather than a name connected to anyone the family already knows.`}
+      ],
+      closingHTML: `<p>Back, arms, eyes — three details, in that order, and by the third one the reader knows exactly what the children have found before anyone says the word "unconscious."</p>`,
+      takeaway: "A list of concrete physical details, arranged to escalate from ambiguous to unmistakable, can build tension more powerfully than a single stated emotion or outcome.",
+      aboutBook: {
+        overview: "Chapter 11 of The Railway Children (1906) introduces a 'hare and hounds' paper chase — a real Edwardian children's running game — and turns it, mid-chapter, into a rescue.",
+        facts: [
+          "'Hare and hounds' paper chases were a genuinely common outdoor pastime for children and young adults in Edwardian England, with one runner (the hare) scattering torn paper as a trail for the others (the hounds) to follow.",
+          "This chapter is the first time in the book that an outsider — someone entirely unconnected to the family at the story's start — is brought directly into their home, setting up everything that follows in the next three chapters.",
+          "The tunnel setting reuses a location the children already know well from earlier in the book, rather than introducing a wholly new place — Nesbit tends to bring the story's biggest turns back to a small handful of familiar settings (the line, the station, the tunnel) rather than constantly introducing new ones."
+        ]
+      }
+    },
+    verdictOptions: [
+      "Still Called By His Costume",
+      "Detail One: Just a Posture",
+      "Detail Two: The Word That Changes Everything",
+      "Detail Three: Confirmation",
+      "Escalation By List, Not By Adjective"
+    ]
+  },
+
+  railway_ch12: {
+    meta: {
+      num: "CASE FILE NO. 14", title: "The Shillings on the Floor",
+      author: "E. Nesbit, The Railway Children — Chapter 12: What Bobbie Brought Home",
+      desc: "An exhausted signalman tries to bribe the children into silence. Find five hidden clues in Peter's refusal.",
+      totalClues: 5
+    },
+    stage1: {
+      label: "CASE FILE NO. 14 &middot; THE RAILWAY CHILDREN, E. NESBIT",
+      title: "Just read it. Notice who speaks with words, and who answers with action.",
+      brief: `While Bobbie stays with the injured Jim in the tunnel, Peter and Phyllis go for help and find the signalman asleep on duty — dangerously neglectful, and terrified of being reported. He offers them money to stay quiet.`,
+      passage: `"Here," he said. "I'll give you this to hold your tongues about what's taken place to-day." "You ARE a nasty man, though, aren't you?" said Phyllis. Peter took a step forward and knocked the man's hand up, so that the shillings leapt out of it and rolled on the floor. "If anything COULD make me sneak, THAT would!" he said.`,
+      prompt: "Read it again. Peter and Phyllis both refuse the bribe — but in completely different ways. What's the difference?"
+    },
+    stage2: {
+      label: "CASE FILE NO. 14 &middot; INVESTIGATE",
+      title: "Five clues are hiding in this refusal.",
+      brief: `Same short passage — click on any phrase where the technique is doing more than just reporting what was said.`,
+      segments: [
+        {id:1, text:`"Here," he said. "I'll give you this to hold your tongues about what's taken place to-day."`},
+        " ",
+        {id:2, text:`"You ARE a nasty man, though, aren't you?" said Phyllis.`},
+        " ",
+        {id:3, text:"Peter took a step forward and knocked the man's hand up,"},
+        " ",
+        {id:4, text:"so that the shillings leapt out of it and rolled on the floor."},
+        " ",
+        {id:5, text:'"If anything COULD make me sneak, THAT would!" he said.'}
+      ],
+      clueData: {
+        1: {title:"The Bribe Names Itself", text:"'Hold your tongues' is the signalman's own phrase, not the narrator's judgment of him. Nesbit lets him incriminate himself in his own words — we don't need to be told this is a cover-up, he says so himself."},
+        2: {title:"Phyllis's Blunt Honesty", text:"Phyllis says exactly what she's thinking, with no diplomatic softening at all. The capitalized 'ARE' is Nesbit's way of showing us the stress she'd put on it if you heard her say it aloud."},
+        3: {title:"Action Before Words", text:"Peter answers with his body before he answers with speech — the physical gesture (knocking the hand away) comes first in the sentence, decisive and almost instinctive."},
+        4: {title:"Proof We Can See", text:"The coins scattering on the floor is visual, physical proof of the refusal. We don't need to be told Peter said no — we see the shillings rolling away from him."},
+        5: {title:"An Odd Kind of Logic", text:"Peter's line is more interesting than a simple refusal: he's saying the bribe ITSELF is the one thing that could have tempted him toward dishonesty — almost the opposite effect from what the signalman intended."}
+      }
+    },
+    quiz: [
+      {q:"What does the phrase 'hold your tongues' reveal about the signalman?", opts:["That he's being friendly","That he knows exactly what he's asking the children to do — cover up his mistake","That he's confused","That he's joking"], correct:1, explain:"He incriminates himself in his own words — Nesbit doesn't need to narrate his guilt, because his own phrase does it for her."},
+      {q:"How does Peter primarily respond to the bribe — with words or with action?", opts:["Only with words","With a physical action (knocking the hand away) that comes before his words","He says nothing at all","He takes the money first, then refuses"], correct:1, explain:"The physical gesture is described first in the sentence — decisive action ahead of speech."},
+      {q:"What's the effect of writing certain words in capitals, like ARE, COULD, and THAT?", opts:["It's simply a printing error repeated four times","It represents spoken stress or emphasis — how the character would say the word aloud","It means the character is shouting the whole sentence","It has no particular effect"], correct:1, explain:"Capitalizing a single word within a sentence was a common device in older prose for showing exactly which word a speaker leaned on."},
+      {q:"What's slightly unusual about Peter's exact reasoning — 'If anything COULD make me sneak, THAT would!'?", opts:["He says the bribe is what would have tempted him toward dishonesty, which is almost the opposite of what the signalman hoped it would do","He is agreeing to take the money after all","He doesn't understand what a bribe is","He is quoting Phyllis"], correct:0, explain:"Instead of simply refusing, Peter frames the bribe itself as the closest thing that could make him dishonest — a small twist on a straightforward moral refusal."}
+    ],
+    stage3: {
+      lockText: "Answer all four questions to unlock the full case file.",
+      headerHTML: `<p>This short exchange packs in two distinct kinds of refusal, one piece of self-incriminating dialogue, and — easy to miss on a first read — a genuinely complicated moral situation.</p>`,
+      chapters: [
+        {heading:"A Printing Convention Worth Noticing", body:`Capitalizing single words to show spoken stress (ARE, COULD, THAT) is a device from an era before italics were the automatic choice for emphasis in dialogue. It's worth noticing here because it's doing real work: without it, "You are a nasty man, though, aren't you?" reads as a calm observation. With the capital, it becomes exactly what an indignant child would actually sound like.`},
+        {heading:"The Same Trait, Different Stakes", body:`Peter answering with action before words is not new — back in the burning-barge chapter, "Peter had already gone down two of the cabin steps into the cloud of thick smoke" before he says a single word about what he's doing. There, it was physical bravery. Here, the same instinct — act first, explain after — shows up as moral courage instead. It's the same character trait, doing a different job.`},
+        {heading:"Refusing the Bribe, Choosing the Mercy", body:`What the passage alone doesn't show: despite refusing the money outright, Peter and Phyllis still agree to keep the signalman's exhaustion quiet anyway — not for a bribe, but because they learn his own son is dangerously ill and he hasn't slept in five days. This complicates a simple "honesty wins" reading of the scene. The children refuse to be bought, but they still choose mercy on their own terms, for their own reasons — a more grown-up kind of judgment than either pure honesty or pure rule-following.`},
+        {heading:"Two Sick Children, Side by Side", body:`The signalman's private fear for his own child sits in the very same chapter as Bobbie's unspoken fear for her father, discovered only two chapters earlier. Nesbit never draws that comparison explicitly — she simply places two family crises next to each other and lets the reader notice the echo.`}
+      ],
+      closingHTML: `<p>Peter refuses the bribe with his hands before he refuses it with his mouth — and the coins on the floor say everything the narrator doesn't have to.</p>`,
+      takeaway: "A character's actions can deliver a refusal — or any decision — more forcefully than their dialogue, and a 'good' choice can still be more morally complicated than it first looks.",
+      aboutBook: {
+        overview: "Chapter 12 of The Railway Children (1906) follows directly from the tunnel rescue, and introduces the book's most morally complicated minor character: an exhausted, frightened signalman.",
+        facts: [
+          "A signalman falling asleep on duty was a genuinely serious safety failure on early-1900s British railways, where signal boxes controlled train movements largely by hand and eye — Nesbit is drawing on a real occupational danger, not an invented one.",
+          "This is the only adult in the book who behaves dishonestly toward the children and is nonetheless treated with sympathy by the end of the same scene, rather than simply being condemned.",
+          "Jim, the injured boy, is brought home to Three Chimneys in this chapter — the first time in the book an outsider is welcomed fully into the family's house, not just their company."
+        ]
+      }
+    },
+    verdictOptions: [
+      "The Bribe Names Itself",
+      "Phyllis's Blunt Honesty",
+      "Action Before Words",
+      "Proof We Can See",
+      "An Odd Kind of Logic"
+    ]
+  },
+
+  railway_ch13: {
+    meta: {
+      num: "CASE FILE NO. 15", title: "I Have Hopes, My Dear",
+      author: "E. Nesbit, The Railway Children — Chapter 13: The Hound's Grandfather",
+      desc: "The Old Gentleman speaks to Bobbie alone at the garden gate. Find five hidden clues in what he chooses to say — and not say.",
+      totalClues: 5
+    },
+    stage1: {
+      label: "CASE FILE NO. 15 &middot; THE RAILWAY CHILDREN, E. NESBIT",
+      title: "Just read it. Notice what he doesn't promise.",
+      brief: `Jim has turned out to be the Old Gentleman's own grandson. Before he leaves, the Old Gentleman speaks to Bobbie privately at the garden gate — about the letter she once sent him, and about her Father.`,
+      passage: `"You're a good child, my dear — I got your letter. But it wasn't needed. When I read about your Father's case in the papers at the time, I had my doubts. [...] I have hopes, my dear — I have hopes." "Yes — I may say great hopes. But keep your secret a little longer. Wouldn't do to upset your Mother with a false hope, would it?"`,
+      prompt: "Read it again — count how many times he says a version of the word 'hope.' Why repeat it instead of saying something stronger, like 'I promise'?"
+    },
+    stage2: {
+      label: "CASE FILE NO. 15 &middot; INVESTIGATE",
+      title: "Five clues are hiding in this conversation.",
+      brief: `Same short passage — click on any phrase where the Old Gentleman is choosing his words with unusual care.`,
+      segments: [
+        {id:1, text:`"You're a good child, my dear — I got your letter. But it wasn't needed.`},
+        " ",
+        {id:2, text:"When I read about your Father's case in the papers at the time, I had my doubts."},
+        ` [...] `,
+        {id:3, text:'I have hopes, my dear — I have hopes."'},
+        ` "Yes — I may say great hopes. `,
+        {id:4, text:"But keep your secret a little longer."},
+        " ",
+        {id:5, text:`Wouldn't do to upset your Mother with a false hope, would it?"`}
+      ],
+      clueData: {
+        1: {title:"Two Facts, Layered At Once", text:"He reassures her the letter wasn't a mistake — but in the very same breath reveals he already knew independently, before she ever wrote to him. Two pieces of information arrive together, and the second quietly outweighs the first."},
+        2: {title:"Careful, Not Certain", text:"'I had my doubts' — not 'I knew he was innocent.' An old, careful man chooses a modest, hedged word for something he can't yet prove, rather than overstating what he actually knows."},
+        3: {title:"Repetition Instead of Escalation", text:"Saying 'I have hopes' twice in a row, rather than building to something stronger, is itself a technique — it reads like a man reassuring himself as much as her, treading carefully around a child's feelings instead of making a promise he might not be able to keep."},
+        4: {title:"A New Secret, Not a Solved One", text:"'Keep your secret a little longer' shifts Bobbie from someone who simply HAS a secret into someone who must actively KEEP a new one. The burden introduced back in Chapter 10 isn't lifted here — it's extended."},
+        5: {title:"A Question, Not an Order", text:"He phrases this as a question, not an instruction — asking for her agreement rather than commanding a child around. It matches how he's treated her throughout the book: as someone capable and trustworthy, not simply someone to be managed."}
+      }
+    },
+    quiz: [
+      {q:"How many times does the Old Gentleman say a version of the word 'hope' in this short exchange?", opts:["Once","Twice, plus a third time as 'great hopes'","Never — he only says 'doubts'","Four times"], correct:1, explain:"He says 'I have hopes' twice, then 'great hopes' — repetition rather than one single, stronger statement."},
+      {q:"Why might he say 'I had my doubts' instead of something more certain, like 'I knew he was innocent'?", opts:["Because he isn't a careful speaker","Because a careful, older man is choosing modest words for something he can't yet fully prove","Because he doesn't believe Bobbie's Father is innocent","Because he's being sarcastic"], correct:1, explain:"Hedged, careful language matches a man unwilling to overstate what he actually knows for certain."},
+      {q:"What does 'keep your secret a little longer' actually ask Bobbie to do?", opts:["Forget about her Father entirely","Take on a brand-new secret, on top of the one she's already been carrying alone since Chapter 10","Tell her Mother immediately","Write another letter right away"], correct:1, explain:"Rather than lifting Bobbie's burden of secrecy, this moment extends it — she now has two things to hold quietly instead of one."},
+      {q:"Why does he end with a question ('would it?') instead of a direct instruction?", opts:["He's unsure what he means","It invites Bobbie's agreement and treats her as a capable partner, rather than simply ordering a child around","It's a mistake in the dialogue","He's asking for her permission to leave"], correct:1, explain:"Phrasing it as a question matches how he's treated Bobbie throughout the book — as someone trustworthy enough to be reasoned with, not just managed."}
+    ],
+    stage3: {
+      lockText: "Answer all four questions to unlock the full case file.",
+      headerHTML: `<p>This is a quiet, private conversation at a garden gate — and it's built almost entirely out of careful, hedged language, which is exactly the point.</p>`,
+      chapters: [
+        {heading:"Two Kinds of Certainty, Placed on Purpose", body:`Set this conversation's language next to Chapter 10's. There, the words were flat and absolute: "Guilty." "Five years' Penal Servitude." Here, every word is hedged: "doubts," "hopes," "may say." Nesbit deliberately gives the terrible truth harsh legal certainty, and gives the possible good news only careful, unproven hope — because false comfort would be its own kind of dishonesty, and the book has been careful about honesty from the start.`},
+        {heading:"A Reply, Not a Fresh Disclosure", body:`This conversation only makes full sense as a REPLY. Bobbie already sent the Old Gentleman a letter — weeks earlier, enclosing the newspaper cutting about her Father — without telling anyone, including her own Mother. What looks here like the Old Gentleman generously offering hope is really him answering a question she asked first, alone, at real risk to herself if it had gone wrong.`},
+        {heading:"Practical Help, Right Alongside Emotional Hope", body:`In this same visit — just before this conversation at the gate — the Old Gentleman also arranges for Mother to become matron of what he calls "Three Chimneys Hospital," solving a real, practical, financial problem for the family. Nesbit places a concrete, material kindness and a fragile emotional hope in the very same scene, rather than treating them as separate kinds of help.`},
+        {heading:"A Name For the Old Gentleman At Last", body:`This chapter's title finally gives the Old Gentleman a real relationship rather than just a role — "grandfather" — after Case File 13 (Chapter 11) noted that he, like Jim in that earlier scene, had mostly been known by function rather than identity. It's worth noticing that even now, he still isn't given an actual proper name on the page — only a family relationship. Role becomes relationship, but not yet a name.`}
+      ],
+      closingHTML: `<p>"I have hopes, my dear — I have hopes." Said once would be reassurance. Said twice, it's something closer to a man steadying himself before he says it a third time, as "great hopes," to a child he clearly doesn't want to disappoint.</p>`,
+      takeaway: "Careful, hedged, repeated language can carry more emotional honesty than a confident promise — especially when a character is trying not to overpromise to someone they care about.",
+      aboutBook: {
+        overview: "Chapter 13 of The Railway Children (1906) resolves the mystery of the Old Gentleman's identity and quietly restarts the book's central hope — that Bobbie's Father's name can be cleared.",
+        facts: [
+          "This chapter contains the book's only scene of a private, one-on-one adult conversation with Bobbie specifically about her Father — every other reference to the secret, before this point, has been either internal (her own thoughts) or shared with her siblings.",
+          "'Matron' of a small private household 'hospital' — essentially, a paid nurse for a recovering patient in a family home — was a real and respectable occupation for a woman in Nesbit's era, which is part of why this arrangement solves a genuine, practical problem for the family, not just a sentimental one.",
+          "The chapter's title plays on the previous chapter's nickname for Jim ('the hound') — turning a piece of paper-chase slang into a real family relationship by the end of the book."
+        ]
+      }
+    },
+    verdictOptions: [
+      "Two Facts, Layered At Once",
+      "Careful, Not Certain",
+      "Repetition Instead of Escalation",
+      "A New Secret, Not a Solved One",
+      "A Question, Not an Order"
+    ]
+  },
+
+  railway_ch14: {
+    meta: {
+      num: "CASE FILE NO. 16", title: "My Daddy, My Daddy",
+      author: "E. Nesbit, The Railway Children — Chapter 14: The End",
+      desc: "The final morning. Find five hidden clues in the sentence that closes the whole story's central wait.",
+      totalClues: 5
+    },
+    stage1: {
+      label: "CASE FILE NO. 16 &middot; THE RAILWAY CHILDREN, E. NESBIT",
+      title: "Just read it. Notice the very first word.",
+      brief: `All morning, villagers have been strangely, warmly kind to Bobbie for reasons she doesn't understand. At the station, an ordinary train stops — and one passenger is not a stranger.`,
+      passage: `"Oh! my Daddy, my Daddy!" That scream went like a knife into the heart of everyone in the train, and people put their heads out of the windows to see a tall pale man with lips set in a thin close line, and a little girl clinging to him with arms and legs, while his arms went tightly round her.`,
+      prompt: "Read it again. Count how many people this sentence is actually about, and how many of them we're told nothing at all about."
+    },
+    stage2: {
+      label: "CASE FILE NO. 16 &middot; INVESTIGATE",
+      title: "Five clues are hiding in this final scene.",
+      brief: `Same short passage — click on any phrase where the sentence is doing more than simply describing a reunion.`,
+      segments: [
+        {id:1, text:'"Oh! my Daddy, my Daddy!"'},
+        " ",
+        {id:2, text:"That scream went like a knife into the heart of everyone in the train,"},
+        " and ",
+        {id:3, text:"people put their heads out of the windows"},
+        " to see ",
+        {id:4, text:"a tall pale man with lips set in a thin close line,"},
+        " and a little girl clinging to him with arms and legs, while ",
+        {id:5, text:"his arms went tightly round her."}
+      ],
+      clueData: {
+        1: {title:"A Scream, Not a Sentence", text:"Nesbit's stage direction is 'that scream' — not 'she said' or 'she cried.' The word itself tells us this is pure, uncontrolled emotional release, and the repetition ('my Daddy, my Daddy') is the sound of someone who can't manage a full, composed sentence."},
+        2: {title:"Borrowing the Language of Pain", text:"'Like a knife into the heart' is a violent, physical simile used to describe one of the most joyful moments in the whole book — Nesbit reaches for the language of injury to capture how powerfully moving the sound is to total strangers, not just to Bobbie."},
+        3: {title:"The Camera Pulls Back", text:"'People put their heads out of the windows' widens the shot — this reunion isn't private. It's witnessed by an entire train full of strangers, giving a very personal moment an almost public, theatrical scale."},
+        4: {title:"A Body That Shows the Years, Not the Feelings", text:"Father is described physically — 'pale,' 'a thin close line' — rather than through any direct statement of emotion. 'Thin close line' suggests restraint and exhaustion; the reader has to infer five years' hardship from his body rather than being told about it directly."},
+        5: {title:"Restrained, Even Now", text:"Notice it's not 'he hugged her' — it's the more specific, controlled 'his arms went tightly round her,' which echoes the restraint of his 'thin close line' lips even at the exact moment of release."}
+      }
+    },
+    quiz: [
+      {q:"Why does Nesbit choose the word 'scream' instead of 'said' or 'cried out' for Bobbie's line?", opts:["It's a typo","It signals pure, uncontrolled emotional release, unlike any of Bobbie's composed dialogue earlier in the book","It means Bobbie is frightened","It's meant to sound comic"], correct:1, explain:"Every other major emotional moment in the book has involved careful, composed speech — this is the first time language breaks down into something closer to pure sound."},
+      {q:"What's unusual about comparing a joyful scream to 'a knife into the heart'?", opts:["Nothing, it's a common phrase for happiness","It borrows the language of violence and pain to describe an intensely joyful moment", "It means someone was actually hurt","It's describing Father's physical pain"], correct:1, explain:"The simile deliberately pairs an image of injury with a moment of overwhelming happiness, showing how powerful the sound is rather than how painful."},
+      {q:"Why might Nesbit widen the scene to include 'people' putting their 'heads out of the windows'?", opts:["To criticize nosy strangers","To give this private reunion a public, witnessed, almost theatrical scale","Because the train is about to crash","Simply to describe the train"], correct:1, explain:"The camera pulling back to a whole train full of strangers transforms one family's private moment into something the wider world witnesses and reacts to."},
+      {q:"What does the phrase 'his arms went tightly round her' — instead of, say, 'he hugged her tightly' — suggest about Father?", opts:["He doesn't want to hug her","A certain restraint or control, even in this moment of release, matching the 'thin close line' of his lips","He's confused about what to do","It has no particular effect"], correct:1, explain:"The more specific, slightly formal phrasing echoes his restrained physical description, suggesting five years have changed how freely he expresses emotion."}
+    ],
+    stage3: {
+      lockText: "Answer all four questions to unlock the full case file.",
+      headerHTML: `<p>This is the sentence the entire book has been building toward since Chapter 1 — and it closes the story's central question with an image, not an explanation.</p>`,
+      chapters: [
+        {heading:"The First Uncontrolled Words in the Book", body:`Across fourteen chapters, speech in this book has mostly been composed, witty, careful, or deliberately withheld — Mother's careful evasion in Chapter 1, the Old Gentleman's hedged hopes in Chapter 13, even Peter's clipped defiance in Chapter 12. This is the first moment of genuinely uncontrolled speech in the entire story, and Nesbit gives it to Bobbie — the child who has carried the secret longest, and most silently.`},
+        {heading:"A Pattern Completed, Not Started", body:`Earlier the same morning, villagers behave strangely warm toward Bobbie for reasons she can't explain — waving, blessings, a handshake like a pump-handle. The whole village has apparently known the good news before she does. This final scene, with an entire train of strangers reacting before Bobbie's own composure catches up, is the last variation of that same pattern: the world around Bobbie knowing and responding first, again.`},
+        {heading:"Bodies Speaking Where Words Don't", body:`Father's restrained physical description, and 'his arms went tightly round her' rather than a looser, more effusive phrase, connects back to a pattern across the whole book — Perks unable to voice his gratitude directly in Chapter 9, the Old Gentleman choosing careful hedges over promises in Chapter 13. Nesbit consistently lets adults' bodies and actions carry feelings their words won't fully say, and this final embrace is the clearest example of it in the entire novel.`},
+        {heading:"Answering Chapter One", body:`Chapter 1 opens with Mother's careful, protective lie: "Father's been called away — on business." Chapter 14 ends with the true, full return that lie was always standing in for. Read this way, the whole book is shaped as one long answer to the very first evasion — and the story only really ends once that original sentence is finally made true.`}
+      ],
+      closingHTML: `<p>"Oh! my Daddy, my Daddy!" — two words, screamed, repeated once. Twelve chapters of careful, evasive, hedged adult language finally give way to a child who can't manage a full sentence at all. That collapse into simplicity is the ending's whole power.</p>`,
+      takeaway: "An ending can land hardest not through elaborate description, but by finally letting go of the careful, composed language the rest of the story has used — and by widening the scene to show a private moment witnessed by a whole world of strangers.",
+      aboutBook: {
+        overview: "Chapter 14, 'The End,' closes The Railway Children (1906), resolving both Bobbie's private secret and the family's five-year separation in a single station-platform scene.",
+        facts: [
+          "E. Nesbit was a founding member of the Fabian Society and wrote across many genres, but The Railway Children (first serialized, then published as a novel in 1906) remains her most widely read work well over a century later.",
+          "This is the only chapter in the book narrated with Bobbie fully at its emotional center from its very first paragraph to its last — every earlier chapter shares its attention across all three children.",
+          "The book never explicitly states what crime Father was wrongly convicted of, nor precisely how his name is cleared — Nesbit resolves the plot's central injustice without ever dwelling on its mechanics, keeping the story's focus on the family rather than the case itself."
+        ]
+      }
+    },
+    verdictOptions: [
+      "A Scream, Not a Sentence",
+      "Borrowing the Language of Pain",
+      "The Camera Pulls Back",
+      "A Body That Shows the Years, Not the Feelings",
+      "Restrained, Even Now"
+    ]
+  }
+
 };
 
 
@@ -3125,7 +3603,7 @@ function resetProgress() {
 
 /* =================== BOARD =================== */
 /* =================== CASE ORDER / SEQUENTIAL UNLOCK =================== */
-const CASE_ORDER = ['gatsby', 'cities', 'railway_ch1', 'railway_ch2', 'railway_ch3', 'railway_ch4', 'railway_ch5', 'railway_ch6', 'railway_ch7', 'railway_ch8', 'trolls', 'skellig_fear', 'earnest', 'holmes', 'pride_prejudice', 'secret_garden'];
+const CASE_ORDER = ['gatsby', 'cities', 'railway_ch1', 'railway_ch2', 'railway_ch3', 'railway_ch4', 'railway_ch5', 'railway_ch6', 'railway_ch7', 'railway_ch8', 'railway_ch9', 'railway_ch10', 'railway_ch11', 'railway_ch12', 'railway_ch13', 'railway_ch14', 'trolls', 'skellig_fear', 'earnest', 'holmes', 'pride_prejudice', 'secret_garden'];
 
 /* =================== FIELD RANK (PROMOTION) =================== */
 // Thresholds grow further apart as the count rises (gaps: 1,1,2,3,4,5...).
@@ -4198,6 +4676,7 @@ const chapters = [
     "behind": "Nesbit admitted she didn't actually know much about trains \u2014 she dedicated the whole book to her son, whose real railway knowledge she leaned on while writing it.",
     "deeper": "The exact sentence to slow down on is this one: \u201cYou will think that they ought to have been very happy. And so they were, but they did not know HOW happy till the pretty life in the Red Villa was over and done with, and they had to live a very different life indeed. The dreadful change came quite suddenly.\u201d Notice Nesbit never tells you what the change actually is here \u2014 she tells you only that you'll wish you'd appreciated the happiness sooner, once it's gone. Hold onto that exact promise: the very last chapter of the whole book pays it off directly, when the happiness Bobbie once took for granted comes flooding back all at once. Also worth knowing: this chapter opens with Peter's tenth birthday and a beloved model engine that explodes only three days later \u2014 and Nesbit deliberately never says whose fault it was, blaming it on \u201ceither Peter's inexperience or Phyllis's good intentions, which had been rather pressing, or some other cause.\u201d Father promises to mend it himself, one rainy Saturday \u2014 a promise he never gets the chance to keep, because he's taken away that very night.",
     "detective": "Something is being kept from Bobbie, Peter and Phyllis \u2014 and from you. What small clues does Nesbit drop about why Father left, without ever saying it outright?",
+    "detectiveGuidance": "One way to think about it: notice how carefully Nesbit describes the two men's manner rather than their words \u2014 grave voices, a long private talk with Father, Mother's white face afterwards. We're never told what's said, only how everyone around it looks and sounds. That's the biggest clue of all: something is serious enough that even the adults are being careful in front of the children \u2014 very different from how an ordinary business trip would be described.",
     "words": [
       {
         "w": "domestic",
@@ -4223,7 +4702,8 @@ const chapters = [
       "correct": 1,
       "explain": "Father is taken away by strangers one night, and afterwards the family can't afford their old life \u2014 that's why they move to Three Chimneys."
     },
-    "chat": "If you had to suddenly leave everything familiar behind, what's one thing you'd miss most, the way Bobbie might miss something from her old London life?"
+    "chat": "If you had to suddenly leave everything familiar behind, what's one thing you'd miss most, the way Bobbie might miss something from her old London life?",
+    "chatGuidance": "There's no need to steer this toward anything specific \u2014 the point is just to get her naming something real and concrete, the way Bobbie might miss one particular chair by the fire rather than \u201cLondon\u201d in general. If she's stuck, sharing your own specific answer first \u2014 an object, a routine, a person \u2014 often unlocks a more specific one from her."
   },
   {
     "num": "II",
@@ -4340,6 +4820,7 @@ const chapters = [
     "behind": "The chapter's title comes from Bobbie's own panicked thought the moment she realises the train is moving with her still aboard: \u201cI've no business here. I'm an engine-burglar\u2014that's what I am.\u201d She names herself before anyone else does.",
     "deeper": "Follow the engine all the way back to Chapter I: it's the very same model engine that exploded three days after Peter's tenth birthday, the one Father promised to mend himself \u201cfor a rainy day\u201d \u2014 a promise he never got to keep, because he was taken away that same night. Bobbie's private vow here, to mend the broken half and give it back to Peter, quietly takes up a promise Father left unfinished, without anyone in the story ever pointing that out directly. By the end of the chapter, as the children walk home, \u201cPeter hugging the engine,\u201d it's finally whole again \u2014 mended not by Father, but by two working railwaymen Bobbie had never met that morning.",
     "detective": "Bobbie decides to sneak onto the train completely alone \u2014 she doesn't even tell Peter or Phyllis beforehand. Why might Nesbit have her act by herself here, rather than with her brother and sister alongside her?",
+    "detectiveGuidance": "One way to think about it: a private promise often feels different from a shared plan \u2014 Bobbie made this vow silently, to herself, at her own birthday tea, so keeping it alone may feel like it's genuinely hers to keep, not a group project. There's also a simple storytelling reason: solo risk-taking reads as more daring and more nerve-wracking than the same risk shared three ways, since there's no one else to lean on if it goes wrong.",
     "words": [
       {
         "w": "munificence",
@@ -4365,7 +4846,8 @@ const chapters = [
       "correct": 1,
       "explain": "At her own birthday tea, Bobbie privately resolves to mend the broken half-engine Peter gave her and give it back to him \u2014 and boarding the train is her attempt to actually make that happen."
     },
-    "chat": "Bobbie makes a quiet promise to herself and then goes to real lengths \u2014 climbing onto a moving train! \u2014 to keep it, without telling anyone what she's up to. Have you ever made a promise to yourself that turned out to be harder to keep than you expected?"
+    "chat": "Bobbie makes a quiet promise to herself and then goes to real lengths \u2014 climbing onto a moving train! \u2014 to keep it, without telling anyone what she's up to. Have you ever made a promise to yourself that turned out to be harder to keep than you expected?",
+    "chatGuidance": "This works best as a two-way conversation rather than a question aimed only at her \u2014 sharing your own example of a promise that got harder than expected, even a small one, usually makes it easier for her to open up about hers. The size of the promise doesn't matter; what matters is the experience of following through once it stopped being easy."
   },
   {
     "num": "V",
@@ -4388,6 +4870,7 @@ const chapters = [
     "behind": "Political exiles who had fled Tsarist Russia's harsh punishment of writers and dissidents were a real presence in Edwardian London \u2014 Nesbit, a committed socialist, would have known people with real stories much like this one.",
     "deeper": "Keep this chapter in mind for later: the Russian gentleman \u2014 his real name, revealed eventually, is Mr. Szczepansky \u2014 was imprisoned for something he never did, based on evidence that was unfair or invented. That's exactly what turns out to have happened to the children's own Father too, discovered several chapters from now. Nesbit is quietly rehearsing the book's biggest reveal here, using a stranger's story first, before asking you to feel the same shock about someone the children love. Many readers of the time would also have recognised an echo of a real, famous case: the Dreyfus Affair, a French scandal from just a few years before this book was written, in which an army officer was wrongly convicted of spying largely because of prejudice rather than real evidence.",
     "detective": "This chapter ends on real uncertainty \u2014 nobody knows yet whether the Russian gentleman will ever find his wife and children again. Why might Nesbit choose to leave you without an answer here, instead of resolving it immediately?",
+    "detectiveGuidance": "One way to think about it: an immediate happy ending would make this feel like a small, easily-solved problem \u2014 but leaving it genuinely unresolved makes his loss feel real, the way actual separations don't usually get tidied up in a single afternoon. It also quietly mirrors the uncertainty Bobbie is about to feel about her own Father a few chapters from now \u2014 Nesbit is letting you sit with not-knowing here, so it means something more when it happens again later.",
     "words": [
       {
         "w": "trembled",
@@ -4413,7 +4896,8 @@ const chapters = [
       "correct": 1,
       "explain": "The chapter ends with real uncertainty. Mother says she can only \u2018hope and pray\u2019 he'll find them again \u2014 if a reunion comes, it happens later in the book, not here."
     },
-    "chat": "Mother's voice goes unsteady just telling the children this man's story. Has hearing about someone else's hardship ever affected you more than you expected it to?"
+    "chat": "Mother's voice goes unsteady just telling the children this man's story. Has hearing about someone else's hardship ever affected you more than you expected it to?",
+    "chatGuidance": "If she's unsure what to say, it can help to talk about the difference between hearing about something \u201cin the news\u201d versus hearing it told directly by someone in front of you, the way Mother tells it here \u2014 often it's the person telling the story, not just the facts themselves, that makes something land emotionally."
   },
   {
     "num": "VI",
@@ -4624,6 +5108,7 @@ const chapters = [
     "behind": "Edwardian Britain had real waves of public anxiety about spies and foreign espionage \u2014 which gives a father wrongly accused of treason an extra edge for readers at the time.",
     "deeper": "Look back at Chapter V for a moment. Father's story turns out to be almost exactly the Russian gentleman's story, transplanted into an English family: a good man, falsely accused on the strength of evidence \u2014 letters found in his desk \u2014 that Bobbie is certain was planted by someone else. Nesbit gave you this same shape once already, in a stranger's life, before asking you to feel it happen to someone the children (and you) actually love. That's not a coincidence \u2014 it's Nesbit quietly preparing you, several chapters in advance, for exactly this moment.",
     "detective": "You now know the secret the whole book has been quietly hinting at since Chapter I. Look back \u2014 what clues were there all along that you might have missed the first time?",
+    "detectiveGuidance": "One way to think about it: the biggest clue is simply how much everyone avoids the topic \u2014 Mother deflecting questions, the children gradually stopping asking, even the narrator's own vague, ominous phrasing back in Chapter I (\u201ca very different life indeed\u201d). None of it explains anything specifically, but all of it signals something too painful to say directly \u2014 which, looking back, turns out to be exactly true.",
     "words": [
       {
         "w": "accused",
@@ -4649,7 +5134,8 @@ const chapters = [
       "correct": 1,
       "explain": "Perks wraps some old magazines \u2014 meant to entertain Peter, who's hurt his foot \u2014 in an old newspaper, and Bobbie spots the headline while carrying the parcel home."
     },
-    "chat": "Bobbie decides to tell Mother the same day, but keeps it from Peter and Phyllis. Why do you think she made that choice \u2014 and would you have done the same?"
+    "chat": "Bobbie decides to tell Mother the same day, but keeps it from Peter and Phyllis. Why do you think she made that choice \u2014 and would you have done the same?",
+    "chatGuidance": "There's a genuine case for either answer here, so it's worth resisting the urge to say one choice is \u201cright.\u201d Telling Mother immediately shares the burden with someone who can actually help; keeping it from Peter and Phyllis protects them a little longer but means Bobbie carries part of it alone. It might be more useful to ask what she thinks the cost is either way, rather than which choice was better."
   },
   {
     "num": "XI",
@@ -4991,7 +5477,7 @@ function render(){
 
     inner.innerHTML += '<div class="section-label">The heart of it</div><p class="body-text">'+ch.heart+'</p>';
 
-    const RAILWAY_CASE_KEYS = ['railway_ch1','railway_ch2','railway_ch3','railway_ch4','railway_ch5','railway_ch6','railway_ch7','railway_ch8'];
+    const RAILWAY_CASE_KEYS = ['railway_ch1','railway_ch2','railway_ch3','railway_ch4','railway_ch5','railway_ch6','railway_ch7','railway_ch8','railway_ch9','railway_ch10','railway_ch11','railway_ch12','railway_ch13','railway_ch14'];
     if (RAILWAY_CASE_KEYS[idx]) {
       inner.innerHTML += '<button type="button" class="rc-case-link" onclick="jumpToRailwayCase(\'' + RAILWAY_CASE_KEYS[idx] + '\')">🔍 Investigate this chapter\'s technique — Case File No. ' + (idx+3) + ' →</button>';
     }
@@ -5021,6 +5507,12 @@ function render(){
       '<textarea placeholder="Jot your guess here..." oninput="onNotebookInput('+idx+', this.value)">'+(state.notebook[idx]||'')+'</textarea>' +
       '<div class="save-hint" id="nb-hint-'+idx+'">'+((state.notebook[idx]) ? 'saved' : '')+'</div>';
 
+    if (ch.detectiveGuidance) {
+      inner.innerHTML +=
+        '<button type="button" class="rc-reveal-btn" onclick="this.nextElementSibling.classList.toggle(\'show\'); this.textContent = this.nextElementSibling.classList.contains(\'show\') ? \'Hide it again\' : \'\\uD83D\\uDD0D See one way to think about it\';">🔍 See one way to think about it</button>' +
+        '<div class="rc-guidance-box">'+ch.detectiveGuidance+'</div>';
+    }
+
     let wordsHtml = '<div class="section-label">Words worth keeping</div><div class="word-grid">';
     ch.words.forEach((wd,i)=>{
       wordsHtml += '<div class="flip-card" onclick="this.classList.toggle(\'flipped\')">' +
@@ -5047,6 +5539,12 @@ function render(){
     inner.innerHTML += quizHtml;
 
     inner.innerHTML += '<div class="section-label">Chat about it</div><p class="question">'+ch.chat+'</p>';
+
+    if (ch.chatGuidance) {
+      inner.innerHTML +=
+        '<button type="button" class="rc-reveal-btn" onclick="this.nextElementSibling.classList.toggle(\'show\'); this.textContent = this.nextElementSibling.classList.contains(\'show\') ? \'Hide it again\' : \'\\uD83D\\uDCAC For your conversation\';">💬 For your conversation</button>' +
+        '<div class="rc-guidance-box rc-guidance-parent"><em>A starting point, not a script \u2014 there\'s no right answer to this one:</em><br>'+ch.chatGuidance+'</div>';
+    }
 
     body.appendChild(inner);
     card.appendChild(body);
